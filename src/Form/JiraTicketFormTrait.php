@@ -5,7 +5,9 @@ namespace Drupal\jira_ticket\Form;
 trait JiraTicketFormTrait{
 
   public function getJiraTraitForm($config){
-
+    /*
+     * @todo: Lets make sure we TypeHint $config interface this next iteration
+     */
     $jira_ticket_form = array();
     $meta = unserialize($config->get('meta'));
 
@@ -22,7 +24,6 @@ trait JiraTicketFormTrait{
         // those options
         if (count($meta[$saved_project]["issue_type_fields_allowed_values"][$saved_issue_type][$saved_fields[$field->name]]))
         {
-          //dump($meta[$saved_project]["issue_type_fields_allowed_values"][$saved_issue_type][$saved_fields[$field->name]]);
           $jira_ticket_form[] = [
             '#title' => $field->name,
             '#type' => 'select',
@@ -37,14 +38,10 @@ trait JiraTicketFormTrait{
         }
       }
     }
-
-/*    $jira_ticket_form  = [
-      '#type' => 'item',
-      '#markup' => $this->t('I am the Jira form preview!'),
-    ];*/
-
-
+    /*
+     * @todo: when 7.2 is more prevalent consider TypeHinting the return as
+     * well.
+     */
     return $jira_ticket_form;
   }
-
 }
