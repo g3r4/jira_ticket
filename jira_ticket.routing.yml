@@ -1,0 +1,16 @@
+jira_ticket.admin_settings:
+  path: '/admin/config/jira_ticket'
+  defaults:
+    _form: '\Drupal\jira_ticket\Form\JiraTicketConfigurationForm'
+    _title: 'Jira ticket configuration screen'
+  requirements:
+    _permission: 'administer site configuration'
+jira_ticket.create_jira_ticket_form:
+  path: '/jira_ticket/create/ticket'
+  defaults:
+    _form: '\Drupal\jira_ticket\Form\CreateJiraTicketForm'
+    _title: 'CreateJiraTicketForm'
+  requirements:
+    _access: 'TRUE'
+  
+

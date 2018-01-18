@@ -1,0 +1,6 @@
+name: Jira Ticket
+type: module
+description: This module allows you to create a form for your users to generate JIRA tickets. Either on a standard JIRA installation or on a JIRA Help Desk installation
+core: 8.x
+package: Custom
+configure: jira_ticket.admin_settings

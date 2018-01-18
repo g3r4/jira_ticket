@@ -1,0 +1,5 @@
+jira_ticket.settings:
+  title: 'Jira Ticket Settings'
+  parent: system.admin_config_services
+  description: 'Configure your Jira Ticket form'
+  route_name: jira_ticket.admin_settings

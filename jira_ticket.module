@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains jira_ticket.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function jira_ticket_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the jira_ticket module.
+    case 'help.page.jira_ticket':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module allows you to create a form for your users to generate JIRA tickets. Either on a standard JIRA installation or on a JIRA Help Desk installation') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/jira_ticket",
+  "type": "drupal-module",
+  "description": "This module allows you to create a form for your users to generate JIRA tickets. Either on a standard JIRA installation or on a JIRA Help Desk installation",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/jira_ticket",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/jira_ticket",
+    "source": "http://cgit.drupalcode.org/jira_ticket"
+  },
+  "require": { }
+}
