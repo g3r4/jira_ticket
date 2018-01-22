@@ -27,7 +27,6 @@ class CreateJiraTicketForm extends FormBase {
 
     $form[] = $this->getJiraTraitForm($config);
 
-
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Submit'),
@@ -51,7 +50,6 @@ class CreateJiraTicketForm extends FormBase {
     foreach ($form_state->getValues() as $key => $value) {
       drupal_set_message($key . ': ' . $value);
     }
-
   }
 
 }

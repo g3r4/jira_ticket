@@ -12,5 +12,3 @@ jira_ticket.create_jira_ticket_form:
     _title: 'CreateJiraTicketForm'
   requirements:
     _access: 'TRUE'
-  
-

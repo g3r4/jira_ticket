@@ -15,7 +15,7 @@ class JiraTicketConfigurationForm extends ConfigFormBase {
 
   use JiraTicketFormTrait;
 
-  protected $projects_meta = [];
+  protected $projectsMeta = [];
 
   /**
    * {@inheritdoc}
@@ -111,7 +111,7 @@ class JiraTicketConfigurationForm extends ConfigFormBase {
 
     $form['description'] = [
       '#type' => 'item',
-      '#markup' => $this->t('Define the fields you want to display on the user\'s exposed form'),
+      '#markup' => $this->t("Define the fields you want to display on the user's exposed form"),
     ];
 
     $form['tabs'] = [
@@ -174,9 +174,8 @@ class JiraTicketConfigurationForm extends ConfigFormBase {
         $fields_rows[] = [
           'field_name' => $field,
           'field_required' =>
-              $this->projects_meta[$config->get('jira_project')]
-              ['issue_type_fields_descriptions']
-              [$config->get('issue_type')][$field]];
+          $this->projects_meta[$config->get('jira_project')]['issue_type_fields_descriptions'][$config->get('issue_type')][$field],
+        ];
       }
     }
 
@@ -319,10 +318,6 @@ class JiraTicketConfigurationForm extends ConfigFormBase {
     if ($values['issue_type'] == '') {
       $form_state->setErrorByName('issue_type', t('Please choose an Issue Type'));
     }
-    /*
-    if ( $values['field_test_3']  == '' ) {
-    $form_state->setErrorByName('field_test_3', t('Error 3'));
-    }*/
 
     // If validation errors, save them to the hidden form field in JSON format.
     if ($errors = $form_state->getErrors()) {
